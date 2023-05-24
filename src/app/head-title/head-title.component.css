@@ -1,0 +1,41 @@
+.movies-page-header {
+  width: 100%;
+  display: flex;
+  /* justify-content: flex-start; */
+  /* padding: 0 20px; */
+
+  /* margin-right: 500px; */
+}
+
+.movies-page-header .slash {
+  color: var(--c1);
+}
+
+.movies-page-header h1 {
+  font-size: 86px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: linear-gradient(to top, transparent 20%, var(--c3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: onload ease-in .3s;
+}
+
+.movies-page-header h2 {
+  font-size: 76px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background: linear-gradient(to top, transparent 20%, var(--c2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: onload ease-in .3s;
+}
+
+@keyframes onload {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,14 @@
+<div class="custom-dialog-container" *ngIf="showModal">
+  <div class="model" [@modalAnimation]>
+
+    <h3>Choose number of tickets?</h3>
+    <p>You can choose up to 7 tickets only!</p>
+
+    <app-radio-buttons></app-radio-buttons>
+
+    <div class="buttons">
+      <button class="close-btn" (click)="hideModal.emit()">Cancel</button>
+      <button class="pro-btn" (click)="proceedClicked.emit()">Proceed</button>
+    </div>
+  </div>
+</div>

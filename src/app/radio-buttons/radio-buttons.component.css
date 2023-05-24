@@ -1,0 +1,33 @@
+.radio-buttons {
+  background-color: rgb(34, 33, 32);
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.radio-buttons label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  /* background-color: darkgrey; */
+  color: white;
+  cursor: pointer;
+}
+
+.radio-buttons input[type="radio"] {
+  display: none;
+}
+
+.radio-buttons label {
+  border-radius: 5px;
+  background-color: rgb(34, 33, 32);
+}
+
+.radio-buttons label.selected {
+  background-color: var(--c1);
+  color: var(--bg-color);
+}

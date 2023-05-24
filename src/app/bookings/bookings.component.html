@@ -1,0 +1,27 @@
+<div class="bookings-container">
+    <div class="booking-card-container">
+        <app-head-title title="Tickets"></app-head-title>
+        <div *ngFor="let booking of bookings$ | async" class="booking-card">
+            <div class="content">
+                <div class="left">
+                  <h1 class="logo">tify<span>.</span></h1> <!-- Logo -->
+                </div>
+                <div class="right">
+                  <h2 id="movie-title">{{booking.title}}</h2> <!-- Movie title -->
+                  <h3 id="seats">Total seats: <span>{{booking.totalSeats}}</span></h3> <!-- No of seats -->
+                  <h2 id="price">{{booking.totalPrice}}<span> Rs</span></h2> <!-- Price -->
+                </div>
+                <button class="delete-button" (click)="deleteBooking(booking.id)" title="Delete Booking">
+                  DELETE
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <div class="price-card">
+        <h1 id="head">You Have <span>{{totalBookings}}</span> Movies In Your Account.</h1>
+        <h2>Final Cost:</h2>
+        <h1 id="price">{{totalBookingPrice}} Rs</h1>
+        <button>CHECKOUT</button>
+    </div>
+</div>

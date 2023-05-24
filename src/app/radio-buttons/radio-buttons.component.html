@@ -1,0 +1,6 @@
+<div class="radio-buttons">
+  <label *ngFor="let number of numbers" [ngClass]="{'selected': selectedNumber === number}">
+    <input type="radio" name="number" [value]="number" [(ngModel)]="selectedNumber" (change)="selectNumber(number)">
+    {{ number }}
+  </label>
+</div>

@@ -1,0 +1,28 @@
+<div class="movies-page">
+    <div class="movies-container">
+        <app-head-title [title]="'Explore'"></app-head-title>
+        <div class="movies-grid">
+
+            <!-- skeletion loading ui -->
+            <ng-container *ngIf="isLoading; else movieList">
+              <!-- Skeleton UI component -->
+                <div class="skeleton-container">
+                  <div class="skeleton-movie"></div>
+                  <div class="skeleton-movie"></div>
+                  <div class="skeleton-movie"></div>
+                  <div class="skeleton-movie"></div>
+
+                  <div class="skeleton-movie"></div>
+                  <div class="skeleton-movie"></div>
+                  <div class="skeleton-movie"></div>
+                  <div class="skeleton-movie"></div>
+                </div>
+            </ng-container>
+
+            <ng-template #movieList>
+              <app-movie *ngFor="let movie of movies$ | async" [movie]="movie"></app-movie>
+              <div *ngIf="(movies$ | async)?.length === 0">No Movies found.</div>
+            </ng-template>
+        </div>
+    </div>
+</div>

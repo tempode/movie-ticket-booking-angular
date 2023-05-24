@@ -1,0 +1,56 @@
+<div class="container" *ngIf="movie | async as movie">
+    <div class="description-card">
+        <div class="content">
+
+            <!-- Movie Poster -->
+            <img src={{movie.posterUrl}} alt="movie-poster">
+
+            <div class="content-right">
+                <!-- Movie title and director name -->
+                <div class="movie-title-and-director">
+                    <h1 class="title">{{ movie.title }}</h1>
+                    <p>a movie by <span>{{movie.director}}</span></p>
+                </div>
+
+                <!-- Rating -->
+                <h4 id="rating">⭐ {{movie.rating}} / 10</h4>
+
+                <!-- Rekease Date -->
+                <div class="release-date">
+                    <ng-container *ngIf="convertToDate(movie.releaseDate) < todayDate">
+                        <p>Released on — <span class="date">{{ movie.releaseDate | date:'mediumDate' }}</span></p>
+                    </ng-container>
+                    <ng-container *ngIf="convertToDate(movie.releaseDate) >= todayDate">
+                        <p>Releasing on — <span class="date">{{ movie.releaseDate | date:'mediumDate' }}</span></p>
+                    </ng-container>
+                </div>
+
+                <div class="duration-genre-container">
+                    <h4 id="duration"><span>Duration</span> — 2h 12m</h4>
+                    <h5 id="genre">{{ movie.genre.join(' • ') }}</h5>
+                </div>
+
+                <app-button label="BOOK TICKETS" (click)="showAlert()"></app-button>
+                <app-model [showModal]="showModal" (hideModal)="hideModal()" (proceedClicked)="bookTickets()"></app-model>
+                <!-- <app-model [showModal]="showModal" (hideModal)="hideModal()"></app-model> -->
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="about">
+        <app-head-title [title]="'About'"></app-head-title>
+        <p>{{movie.description}}</p>
+    </div>
+
+    <div class="cast">
+        <app-head-title [title]="'Cast'"></app-head-title>
+        <div class="cast-bg">
+            <div class="member"></div>
+            <div class="member"></div>
+            <div class="member"></div>
+        </div>
+    </div>
+
+</div>

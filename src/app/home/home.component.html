@@ -1,0 +1,19 @@
+<!-- Header -->
+<div class="home">
+    <div class="header">
+        <app-top-selling></app-top-selling>
+    </div>
+
+    <div class="recommended">
+
+        <div class="title-container">
+            <app-head-title title="Recommended"></app-head-title>
+        </div>
+
+        <!-- Top selling movies-->
+        <div class="movie-grid">
+            <app-movie *ngFor="let movie of topSellingMovies$ | async" [movie]="movie"></app-movie>
+        </div>
+    </div>
+
+</div>

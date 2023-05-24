@@ -1,0 +1,25 @@
+.header {
+  /* height: 90vh; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.recommended {
+  margin-top: 50px;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+}
+
+.movie-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: -35px;
+}

@@ -1,0 +1,10 @@
+{
+  "bookings": [
+    {
+      "id": 104,
+      "title": "Suzume",
+      "totalPrice": 1000,
+      "totalSeats": 4
+    }
+  ]
+}

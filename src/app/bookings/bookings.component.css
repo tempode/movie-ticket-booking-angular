@@ -1,0 +1,173 @@
+.bookings-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+
+  /* background-color: green; */
+
+  height: 100vh;
+  margin-top: 100px;
+}
+
+.booking-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* overflow: scroll; */
+}
+
+app-head-title {
+  margin-bottom: -40px;
+}
+
+.booking-card {
+  background-color: var(--border-lining);
+  border-radius: 10px;
+  width: 100%;
+  /* height: auto; */
+  position: relative;
+}
+
+.booking-card .content {
+  padding: 20px;
+  align-items: center;
+
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.booking-card::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+}
+
+.price-card {
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  background-color: var(--border-lining);
+  border-radius: 10px;
+  position: sticky;
+}
+
+.price-card #head {
+  font-size: 30px;
+  color: var(--text-color);
+}
+
+#head span {
+  color: var(--c1);
+}
+
+.price-card h2 {
+  letter-spacing: 2px;
+  font-size: 25px;
+  margin-top: 20px;
+  color: var(--c1);
+}
+
+.price-card #price {
+  font-size: 50px;
+  color: rgb(135, 253, 135);
+  margin-top: 10px;
+}
+
+.price-card button {
+  width: 100%;
+  height: 40px;
+
+  border: none;
+  border-radius: 5px;
+  background-color: var(--c1);
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* .left {
+  margin-right: 170px;
+} */
+
+.content .left {
+  display: block;
+  flex-grow: 1;
+  margin-left: 15px;
+}
+
+.content .right {
+  display: block;
+  flex-grow: 1;
+}
+
+.logo {
+  color: var(--text-color);
+  transform: rotate(-90deg);
+  display: inline-block;
+}
+
+.logo span {
+  color: var(--c1);
+}
+
+.right #seats {
+  letter-spacing: 2px;
+  color: var(--text-color);
+  margin-top: 5px;
+}
+
+.right #seats span {
+  color: var(--c1);
+}
+
+.right #price {
+  color: rgb(135, 253, 135);
+  border: 1px solid var(--c2);
+  border-radius: 10px;
+  padding: 10px;
+  width: 120px;
+  margin-top: 5px;
+}
+
+.right #price span {
+  color: white;
+}
+
+
+.delete-button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 30px;
+  width: 30%;
+  background-color: rgba(249, 68, 68, 0.221);
+  color: rgb(255, 71, 71);
+  transform: rotate(-90deg);
+  opacity: 0;
+  transition: opacity 0.3s;
+  border: none;
+  border-radius: 5px;
+}
+
+.booking-card:hover .delete-button {
+  opacity: 1;
+}
+
+.delete-button:hover {
+  cursor: pointer;
+}
+
+
+
+
+
+

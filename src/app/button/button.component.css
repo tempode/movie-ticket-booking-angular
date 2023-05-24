@@ -1,0 +1,31 @@
+button {
+  cursor: pointer;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--c1);
+  width: 200px;
+  height: 45px;
+
+  font-size: 14px;
+  font-weight: bolder;
+
+  color: var(--bg-color);
+  letter-spacing: .6px;
+}
+
+button:hover {
+  animation: bump .4s ease-in;
+}
+
+@keyframes bump {
+  20% {
+    transform: scale(1.0);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}

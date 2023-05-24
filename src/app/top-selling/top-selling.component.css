@@ -1,0 +1,90 @@
+
+.featured-movie {
+  width: 900px;
+  height: 400px;
+  margin-top: 100px;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  border: 2px solid var(--border-lining);
+  margin-left: 10px;
+  margin-right: 10px;
+  /* z-index: -1; */
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+
+  position: relative; /* Add relative positioning */
+  overflow: hidden; /* Hide any overflow of the pseudo-element */
+
+  /* background-image: url("../../assets/posters/suzume-big.jpg"); */
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: -130px;
+  background-size: 110%;
+
+  transition: 1s;
+}
+
+.content {
+  z-index: 1;
+  margin-right: 30px;
+  margin-left: auto; /* push the content to the right */
+  max-width: 400px; /* set a maximum width to avoid overlapping with the background image */
+}
+
+.content p {
+  color: var(--text-color);
+}
+
+.content .tag {
+  border: 1px solid var(--c1);
+  border-radius: 5px;
+  width: 120px;
+  padding: 5px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.tag h5 {
+  color: var(--c1);
+}
+
+.featured-movie::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 400px; /* Set the height to match the .featured-movie element */
+  background-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0.8), transparent);
+}
+
+.featured-movie h2 {
+  font-size: 40px;
+  line-height: 1;
+  z-index: 1;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .featured-movie {
+    background-size: 150%;
+    background-position: center;
+
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .content {
+    margin-left: 10px;
+  }
+
+  .content p {
+    color: white;
+  }
+}

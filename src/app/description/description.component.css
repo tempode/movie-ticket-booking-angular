@@ -1,0 +1,132 @@
+.container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.description-card {
+  background-color: var(--border-lining);
+  width: 1000px;
+  border-radius: 10px;
+
+  padding: 10px;
+}
+
+.description-card .content {
+  display: flex;
+  gap: 30px;
+}
+
+.description-card img {
+  width: 250px;
+  height: auto;
+
+  border-radius: 10px;
+}
+
+.movie-title-and-director .title {
+  font-size: 36px;
+  color: rgb(255, 255, 255);
+}
+
+.movie-title-and-director p {
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+.movie-title-and-director p span{
+  color: var(--c1);
+}
+
+.movie-title-and-director p span:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.content #rating {
+  margin-top: 20px;
+}
+
+.release-date {
+  border: 1px solid var(--c2);
+  border-radius: 10px;
+  padding: 20px 30px 20px 30px;
+
+  margin-top: 20px;
+  width: 300px;
+}
+
+.release-date p {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.release-date .date {
+  color: var(--c1);
+}
+
+.release-date .date:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.content #duration, #genre {
+  color: var(--text-color);
+}
+
+.content #genre {
+  margin-top: 4px;
+  color: var(--text-color);
+}
+
+.duration-genre-container {
+  margin-top: 20px;
+}
+
+.duration-genre-container #duration span {
+  color: var(--c1);
+}
+
+.content-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about {
+  margin-top: 50px;
+}
+
+.about p {
+  color: var(--text-color);
+  background-color: rgba(34, 33, 32, 0.735);
+  width: 1000px;
+  border-radius: 10px;
+  padding: 50px;
+  margin-top: -35px;
+}
+
+.cast {
+  margin-top: 50px;
+}
+
+.cast .cast-bg {
+  background-color: rgba(34, 33, 32, 0.735);
+  width: 1000px;
+  border-radius: 10px;
+  padding: 50px;
+  margin-top: -35px;
+
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+
+}
+
+.cast-bg .member {
+  background-color: var(--bg-color);
+  padding: 50px;
+  border-radius: 50%;
+}

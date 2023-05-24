@@ -1,0 +1,12 @@
+<div class="featured-movie" [style.background-image]="'url(' + topSellingMovie.posterUrl + ')'">
+  <div class="content">
+      <div class="tag">
+          <h5>TOP SELLING</h5>
+      </div>
+      <h2>{{topSellingMovie.title}}</h2>
+      <p>{{topSellingMovie.description}}</p>
+
+      <app-button label="BOOK NOW" [onClick]="goToMovieDescription.bind(this, topSellingMovie.id)"></app-button>
+
+  </div>
+</div>
